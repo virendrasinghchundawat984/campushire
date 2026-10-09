@@ -72,4 +72,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // 4. Auto-dismiss Alert Messages (Logout/Success/Error) after 3.5 seconds
+    const alerts = document.querySelectorAll('.alert');
+    if (alerts.length > 0) {
+        setTimeout(function () {
+            alerts.forEach(function (alert) {
+                alert.classList.add('alert-fade-out');
+                setTimeout(function () {
+                    alert.remove();
+                }, 600);
+            });
+            // Clean URL query parameters so message does not reappear on reload
+            if (window.history && window.history.replaceState && (window.location.search.includes('msg=') || window.location.search.includes('error='))) {
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }, 3500);
+    }
 });

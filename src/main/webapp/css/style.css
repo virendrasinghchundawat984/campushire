@@ -299,6 +299,20 @@ header {
   font-size: 0.95rem;
   border-left: 4px solid;
   box-shadow: var(--shadow-sm);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.5s ease, margin 0.5s ease, padding 0.5s ease;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.alert.alert-fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
 }
 .alert-success {
   background-color: rgba(22, 101, 52, 0.2);

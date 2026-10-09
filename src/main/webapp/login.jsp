@@ -47,16 +47,6 @@
                     Don't have an account yet? <br>
                     <a href="<%= request.getContextPath() %>/register.jsp" style="color: var(--primary); font-weight: 600;">Register as Student or Company</a>
                 </div>
-
-                <!-- Viva Demonstration Helper Credentials -->
-                <div style="margin-top: 25px; padding: 14px; background: #f8fafc; border: 1px dashed var(--border); border-radius: var(--radius); font-size: 0.82rem;">
-                    <div style="font-weight: 700; color: var(--text-main); margin-bottom: 6px;">💡 Demo Accounts for Viva:</div>
-                    <div style="line-height: 1.6; color: #475569;">
-                        &bull; <strong>Student:</strong> <code>rahul.sharma</code> / <code>student123</code><br>
-                        &bull; <strong>Company:</strong> <code>tcs_recruiter</code> / <code>company123</code><br>
-                        &bull; <strong>Admin:</strong> <code>admin</code> / <code>admin123</code>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
