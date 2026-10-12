@@ -8,7 +8,8 @@ cloudflared.exe
 
 push-to-github.bat
 
-# Research papers and academic documentation (Local Only)
+# Research papers, SRS, and academic documentation (Local Only)
 *.pdf
 *Literature_Review*
 *Research_Paper*
+*SRS*
