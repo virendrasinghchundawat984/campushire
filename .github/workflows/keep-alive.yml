@@ -1,0 +1,16 @@
+name: Keep Render Deployment Awake
+
+on:
+  schedule:
+    # Runs every 12 minutes (Render sleeps after 15 minutes of inactivity)
+    - cron: '*/12 * * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Web Application
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" "https://campushire-fdo8.onrender.com/")
+          echo "Render site response status code: $response"

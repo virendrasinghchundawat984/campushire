@@ -7,3 +7,8 @@ cloudflared.exe
 .vscode/
 
 push-to-github.bat
+
+# Research papers and academic documentation (Local Only)
+*.pdf
+*Literature_Review*
+*Research_Paper*
